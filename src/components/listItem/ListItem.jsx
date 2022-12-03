@@ -11,27 +11,28 @@ import { Link } from "react-router-dom";
 
 export default function ListItem({ index, item }) {
   const [isHovered, setIsHovered] = useState(false);
-  const [movie, setMovie] = useState({});
+  // const [movie, setMovie] = useState({});
 
-  useEffect(() => {
-    const getMovie = async () => {
-      try {
-        const res = await axios.get("/movies/find/" + item, {
-          headers: {
-            token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
-          },
-        });
-        setMovie(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getMovie();
-  }, [item]);
+  // useEffect(() => {
+  //   const getMovie = async () => {
+  //     try {
+  //       const res = await axios.get("/movies/find/" + item, {
+  //         headers: {
+  //           token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
+  //         },
+  //       });
+  //       setMovie(res.data);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
+  //   getMovie();
+  // }, [item]);
 
   return (
     <>
-      <Link to={{ pathname: "/watch", movie: movie }}>
+      <Link to={{ pathname: "/watch" }}>
+        {/* <Link to={{ pathname: "/watch", movie: movie }}> */}
         <div
           className="listItem"
           style={{ left: isHovered && index * 350 - 50 + index * 2.5 }}
@@ -44,7 +45,11 @@ export default function ListItem({ index, item }) {
           />
           {isHovered && (
             <>
-              <video src="" autoPlay={true} loop />
+              <video
+                src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+                autoPlay={true}
+                loop
+              />
               <div className="itemInfo">
                 <div className="icons">
                   <PlayArrowIcon className="icon" />
