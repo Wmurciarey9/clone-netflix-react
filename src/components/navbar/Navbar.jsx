@@ -24,28 +24,30 @@ export const Navbar = () => {
       <div className="container">
         <div className="left">
           <img
+            className="logoImg"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png"
             alt=""
           />
 
           <span>Home</span>
-          <span>TV Shows</span>
-          <span>Movies</span>
+          <span className="navMain">TV Shows</span>
+          <span className="navMain">Movies</span>
           <span>New & Popular</span>
           <span>My List</span>
           <span>Browse by Languages</span>
         </div>
         <div className="right">
-          <SearchIcon className="icon" />
+          <SearchIcon className="icon navMain" />
           <span>Kids</span>
           <NotificationsIcon className="icon" />
           <img
+            className="navMain"
             src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
             alt=""
           />
-          <div className="profile">
-            <ArrowDropDownIcon className="icon" />
-            <div className="options">
+          <div className="profile navMain">
+            <ArrowDropDownIcon className="icon navMain" />
+            <div className="options navMain">
               <span>
                 <img
                   className="profilesSpan"

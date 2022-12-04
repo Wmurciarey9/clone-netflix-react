@@ -1,9 +1,11 @@
 import React from "react";
+import { LinkToPages } from "../../components/linkToPages/LinkToPages";
 import "./profiles.scss";
 
 export const Profiles = () => {
   return (
     <div className="profile-section">
+      <LinkToPages />
       <h1>Who's watching?</h1>
       <div className="profile-box">
         <div className="user">

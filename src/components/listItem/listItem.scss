@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .listItem {
   // width: 225px;
   width: 300px;
@@ -8,6 +10,16 @@
   cursor: pointer;
   color: white;
   border-radius: 5px;
+  overflow: hidden;
+
+  @include tablet {
+    width: 150px;
+    height: 85px;
+  }
+  @include mobile {
+    width: 100px;
+    height: 120px;
+  }
 
   img {
     width: 100%;

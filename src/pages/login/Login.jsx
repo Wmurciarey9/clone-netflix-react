@@ -1,5 +1,6 @@
 import "./login.scss";
 import { useContext, useState } from "react";
+import { LinkToPages } from "../../components/linkToPages/LinkToPages";
 // import { login } from "../../authContext/apiCalls";
 // import { AuthContext } from "../../authContext/AuthContext";
 
@@ -15,6 +16,7 @@ export default function Login() {
 
   return (
     <div className="login">
+      <LinkToPages />
       <div className="top">
         <div className="wrapper">
           <img

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useRef } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { LinkToPages } from "../../components/linkToPages/LinkToPages";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -31,6 +32,7 @@ export default function Register() {
 
   return (
     <div className="register">
+      <LinkToPages />
       <div className="top">
         <div className="wrapper">
           <img

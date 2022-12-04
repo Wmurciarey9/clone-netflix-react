@@ -14,11 +14,11 @@ const List = ({ list }) => {
     let distance = listRef.current.getBoundingClientRect().x - 50;
     if (direction === "left" && slideNumber > 0) {
       setSlideNumber(slideNumber - 1);
-      listRef.current.style.transform = `translateX(${350 + distance}px)`;
+      listRef.current.style.transform = `translateX(${330 + distance}px)`;
     }
-    if (direction === "right" && slideNumber < 5) {
+    if (direction === "right" && slideNumber < 6) {
       setSlideNumber(slideNumber + 1);
-      listRef.current.style.transform = `translateX(${-350 + distance}px)`;
+      listRef.current.style.transform = `translateX(${-330 + distance}px)`;
     }
   };
   return (
@@ -32,11 +32,6 @@ const List = ({ list }) => {
           //   style ={{display: !isMoved && "none"}} this is the way the tutorial shows but I still see the arrow when it goes back to zero.
         />
         <div className="container" ref={listRef}>
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
           <ListItem />
           <ListItem />
           <ListItem />

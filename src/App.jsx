@@ -7,6 +7,7 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Watch from "./pages/watch/Watch";
 import { Profiles } from "./pages/profiles/Profiles";
+import { LinkToPages } from "./components/linkToPages/LinkToPages";
 
 const App = () => {
   return (
