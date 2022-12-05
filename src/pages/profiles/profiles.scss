@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .profile-section {
   display: flex;
   background-color: #141414;
@@ -13,10 +15,16 @@
     font-size: 45px;
     letter-spacing: 2px;
     font-weight: 400;
+    margin: 15px;
+    @include mobile {
+      font-size: 35px;
+    }
   }
 
   .profile-box {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-top: 20px;
 
     .user {
@@ -29,12 +37,17 @@
           color: white;
         }
       }
+
       img {
         height: 150px;
         width: 150px;
         border-radius: 4px;
         margin: 15px;
         cursor: pointer;
+        @include mobile {
+          height: 100px;
+          width: 100px;
+        }
       }
       span {
         padding-top: 13px;

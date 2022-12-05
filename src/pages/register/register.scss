@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .register {
   width: 100vw;
   height: 100vh;
@@ -15,6 +17,10 @@
 
       .logo {
         height: 40px;
+        @include mobile {
+          content: url("https://1000marcas.net/wp-content/uploads/2020/01/Netflix-Logo-2006.png");
+          scale: 1.5;
+        }
       }
 
       .loginButton {
@@ -44,13 +50,33 @@
 
     h1 {
       font-size: 50px;
+      text-align: center;
+      margin: 10px;
+
+      @include tablet {
+        font-size: 30px;
+
+        margin: 10px;
+      }
+      @include mobile {
+        font-size: 30px;
+
+        margin: 10px;
+      }
     }
+
     h2 {
       margin: 20px;
+      @include mobile {
+        justify-content: center;
+        text-align: center;
+      }
     }
 
     p {
       font-size: 20px;
+      margin: 20px;
+      text-align: center;
     }
     .input {
       width: 50%;
@@ -61,6 +87,9 @@
       margin-top: 20px;
       height: 50px;
       border-radius: 5px;
+      @include mobile {
+        justify-content: center;
+      }
 
       input {
         flex: 9;
