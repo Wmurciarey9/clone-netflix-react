@@ -12,6 +12,9 @@
   @include mobile {
     right: 170px;
   }
+  @include laptop {
+    right: 100px;
+  }
 
   .page {
     padding: 5px;

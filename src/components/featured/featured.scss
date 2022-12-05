@@ -3,6 +3,7 @@
 .featured {
   height: 90vh;
   position: relative;
+
   @include tablet {
     height: 65vh;
   }
@@ -10,7 +11,7 @@
     height: 60vh;
   }
   @include laptop {
-    height: 10vh;
+    height: 60vh;
   }
 
   .category {
@@ -38,11 +39,15 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+
       @include tablet {
-        height: 70vh;
+        height: 65vh;
       }
       @include mobile {
         height: 50vh;
+      }
+      @include laptop {
+        height: 60vh;
       }
     }
 
@@ -81,7 +86,13 @@
       top: 50vh;
       width: 100%;
       @include mobile {
-        top: 40vh;
+        top: 43vh;
+      }
+      @include tablet {
+        top: 55vh;
+      }
+      @include laptop {
+        top: 43vh;
       }
     }
   }
@@ -98,9 +109,15 @@
       top: 100px;
       width: 50%;
     }
+
     @include mobile {
       width: 65%;
       top: 100px;
+    }
+
+    @include laptop {
+      top: 250px;
+      width: 65%;
     }
 
     h2 {
@@ -111,17 +128,20 @@
       @include mobile {
         font-size: 25px;
       }
+      @include laptop {
+        font-size: 30px;
+      }
     }
 
     img {
       width: 750px;
-      @include tablet {
+      @include mobile {
         width: 300px;
         margin-bottom: 20px;
         object-fit: cover;
         object-position: 0 100%;
       }
-      @include mobile {
+      @include tablet {
         width: 300px;
         margin-bottom: 20px;
         object-fit: cover;
@@ -129,7 +149,7 @@
       }
 
       @include laptop {
-        width: 100px;
+        width: 420px;
         margin-bottom: 20px;
         object-fit: cover;
         object-position: 0 100%;
@@ -144,6 +164,9 @@
       }
       @include mobile {
         font-size: 12px;
+      }
+      @include laptop {
+        font-size: 20px;
       }
     }
 
